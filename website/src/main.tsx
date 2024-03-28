@@ -6,13 +6,13 @@ import Questions from "./pages/Questions.tsx";
 import Result from "./pages/Result.tsx";
 import { store } from "./store";
 import { Provider } from "react-redux";
-import Root from "./Root.tsx";
+import RootLayout from "./pages/RootLayout.tsx";
 import "./index.css";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <RootLayout />,
     children: [
       {
         path: "/",
