@@ -13,13 +13,15 @@ I used [AWS CDK](https://docs.aws.amazon.com/cdk/) to set up an infrastructure i
 - **FrontendStack**: responsible to deploy the React app to an S3 bucket and publish it through CloudFront.
 - **BackendStack**: wraps and deploys and AWS lambda function (present in the _/functions_ folder) that returns the questions. The function integrates into a REST API where the app can call the relevant endpoint.
 
-## Deploy
+## Deploy to AWS
 
 You have to have CDK CLI already set up or use it from the node_modules directory with `npx`.
 
 1. Run `cdk synth BackendStack` followed by `cdk deploy BackendStack`. You'll have the API url at the end of the process
 2. Paste API url to .env in the _website_ folder and build the frontend app.
 3. Run command specified in 1.) step but run it for `FrontendStack`.
+
+[Live app](https://d1m5vv6abjrirk.cloudfront.net/)
 
 ## Useful commands
 
