@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAppDispatch } from "../store";
-import { startQuiz } from "../store/appSlice";
+import { startQuiz } from "../store/quizSlice";
 import { usePrefetch } from "../api";
 
 function Home() {

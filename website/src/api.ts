@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-type Question = {
+export type Question = {
   question: string;
   answer: boolean;
 };

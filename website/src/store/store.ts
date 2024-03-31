@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import appReducer from "./appSlice";
+import quizReducer from "./quizSlice";
 import { api } from "../api";
 
 export const store = configureStore({
   reducer: {
-    app: appReducer,
+    quiz: quizReducer,
     [api.reducerPath]: api.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(api.middleware),

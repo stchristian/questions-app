@@ -1,18 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
+import type { RootState } from "./store";
 
-interface AppState {
+interface QuizState {
   answers: boolean[];
   quizStarted: boolean;
 }
 
-const initialState: AppState = {
+const initialState: QuizState = {
   answers: [],
   quizStarted: false,
 };
 
-const appSlice = createSlice({
-  name: "app",
+const quizSlice = createSlice({
+  name: "quiz",
   initialState: initialState,
   reducers: {
     startQuiz(state) {
@@ -27,5 +28,6 @@ const appSlice = createSlice({
   },
 });
 
-export const { startQuiz, saveAnswer, reset } = appSlice.actions;
-export default appSlice.reducer;
+export const selectQuiz = (state: RootState) => state.quiz;
+export const { startQuiz, saveAnswer, reset } = quizSlice.actions;
+export default quizSlice.reducer;
